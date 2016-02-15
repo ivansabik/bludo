@@ -1,0 +1,39 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.hidden { display:none; }
+
+.centered {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.menu-item {
+    font-size: 4em;
+    font-family: 'Hind', sans-serif;
+    font-weight: bold;
+}
+.title {
+    font-family: 'Sniglet';
+    font-weight: bolder;
+    font-size: 8em;
+    color: #b33d38
+}
+
+.row a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.add-box {
+    position: relative;
+    z-index: 9999;
+    padding-left: 10px;
+    padding-right: 10px
+}
