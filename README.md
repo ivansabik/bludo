@@ -73,7 +73,18 @@ Bludo is a sample app using Meteor and React. The sample app develops a blood do
 
 ## Routes
 
+- /welcome
+- /donor
+- /posting/new
+- /posting/edit/:id
+- /posting/delete/:id
+- /posting/submit
+- /patient
+- /posting/view/:id
+
 ## Views
+
+One per route
 
 ## Deploy
 
