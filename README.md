@@ -1,7 +1,7 @@
 Bludo
 =====
 
-Bludo is a sample app using Meteor and React. The sample app develops a blood donation system to facilitate the patients from all around the world, find blood donors near them.
+Bludo is a sample app using Meteor based in the idea of a blood donation system to help patients find blood donors near them.
 
 ## Users
 
@@ -15,9 +15,9 @@ Bludo is a sample app using Meteor and React. The sample app develops a blood do
 - Single page app
 - Geolocation features (HTML5)
 - The postings should on the map should load real time, also new postings
-- Lazy loading for geopoints on a map. Only the pins that belong to the visible area of map should be loaded. As the user navigates the map, more pins should load accordingly
-- Update views in real time without needing page refresh, as records get updated in the db
-- Db should be NoSQL, MongoDb namely
+- Lazy loading for geopoints on a map, only the ones that belong to the current area of map should be loaded and as the user navigates the map, more pins should appear
+- Update views in real time without needing page refresh, as new postings get saved by patients should be able to see them
+- Db should be NoSQL to scale out and handle all app components with JS
 
 ## Donor user stories
 
@@ -35,7 +35,6 @@ Bludo is a sample app using Meteor and React. The sample app develops a blood do
 - As a patient I should be able to see new pins (if existing) the moment I pan the map to another position
 - As a patient I should be able to click on a posting pin and a popup should appear displaying the donor’s information
 - As a patient I should be able to see pins as they get added by new donors without refreshing the browser page
-- As a patient I should be able to click a text (click to show) e-mail and phone number of the donor
 
 ## Models
 
@@ -44,30 +43,41 @@ Bludo is a sample app using Meteor and React. The sample app develops a blood do
 ### Donor
 
 +firstName: string
+
 +lastName: string
+
 +contactNumber: string
+
 +email: string
+
 +address: string
+
 +bloodGroup: string
 
 ### Posting
 
 +lat: float
+
 +lon: float
+
 +ip: string
+
 +timestamp: string
+
 +editLink: string
+
 +donor: Donor
+
 +isActive: boolean
 
 ## Tools
 
-- Javascript (JS)
 - Meteor
-- React
-- MongoDb
 - Leaflet
-- L.GeoSearch
+- Leaflet GeoSearch
+
+For test suites
+
 - Zombie
 - Jasmine
 

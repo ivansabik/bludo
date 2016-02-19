@@ -1,24 +1,17 @@
 var Browser = require('zombie');
-var url = 'http://work.krasimirtsonev.com/git/blog-posts/TestingWithZombieJS/site/';
 var browser = new Browser();
-var CONFIG = require('./config');
+var URL = 'http://localhost:5000';
 
-describe('When a user first lands the app', function () {
-    it('should display a link for using the app as patient', function (next) {
-        browser.visit(CONFIG.PATIENT_URL, function (err) {
-            expect(true).toBe(false);
-            next();
-        })
-    });
-});
+// User cases specs test suite for patients
 
-describe('When a donor succesfully creates a new posting', function () {
-    it('should display a new pin without needing to do page refresh', function (next) {
-        browser.visit(url, function (err) {
-            expect(true).toBe(false);
-            next();
-        })
+describe('When a user first lands the app', function() {
+  it('should display a link for using the app as patient', function(next) {
+    browser.visit(URL + '/', function(err) {
+      expect(browser.success).toBe(true);
+      expect(browser.query('#donor-mode')).toBeDefined();
+      next();
     });
+  });
 });
 
 /*
